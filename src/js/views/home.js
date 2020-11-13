@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const Home = () => {
 	const { actions, store } = useContext(Context);
 	return (
-		<div className="container">
+		<div className="container" style={{ width: "fit-content" }}>
 			<div className="text-center mt-5">
 				<p style={{ background: "#dce0f5", width: "200px", margin: "auto", borderRadius: "100px" }}>
 					<img src="https://img.icons8.com/fluent-systems-regular/144/000000/housekeeping.png" />
