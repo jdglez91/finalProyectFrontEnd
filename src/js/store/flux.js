@@ -1,7 +1,33 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			loggedIn: false
+			loggedIn: false,
+			servicesProviders: [
+				{
+					name: "Jose Gonzalez",
+					hourlyRate: "20",
+					date: ["111320", "112020", "120120"],
+					city: "Miami",
+					state: "FL",
+					type: "residential"
+				},
+				{
+					name: "Maryann Lopez",
+					hourlyRate: "21",
+					date: ["111620", "111720", "111820"],
+					city: "Miami",
+					state: "FL",
+					type: "residential"
+				},
+				{
+					name: "Mila Fortich",
+					hourlyRate: "18",
+					date: ["112520", "111720", "111820"],
+					city: "Miami",
+					state: "FL",
+					type: "residential"
+				}
+			]
 		},
 		actions: {
 			setLoggedIn: bool => {
