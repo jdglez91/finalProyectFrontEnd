@@ -1,0 +1,14 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+export const ProvideService = () => {
+	return (
+		<div className="container">
+			<div className="row">
+				<div className="col-sm">Dates Avialables</div>
+				<div className="col-sm">Info </div>
+				<div className="col-sm">Summit Buttom</div>
+			</div>
+		</div>
+	);
+};
