@@ -6,6 +6,14 @@ export const SignUp = () => (
 		<form>
 			<div className="form-row">
 				<div className="form-group col-md-6">
+					<label For="inputEmail4">Firts Name</label>
+					<input type="email" className="form-control" id="inputEmail4" />
+				</div>
+				<div className="form-group col-md-6">
+					<label For="inputEmail4">Lasts Name</label>
+					<input type="email" className="form-control" id="inputEmail4" />
+				</div>
+				<div className="form-group col-md-6">
 					<label For="inputEmail4">Email</label>
 					<input type="email" className="form-control" id="inputEmail4" />
 				</div>
@@ -51,5 +59,11 @@ export const SignUp = () => (
 				</button>
 			</Link>
 		</form>
+		<h1 style={{ marginLeft: "50px", marginTop: "50px", color: "rgb(32 93 117)" }}>
+			Welcome to Iwipe the cleaning App
+			<p style={{ background: "#dce0f5", width: "170px", margin: "auto", borderRadius: "100px" }}>
+				<img src="https://img.icons8.com/fluent-systems-regular/144/000000/housekeeping.png" />
+			</p>
+		</h1>
 	</div>
 );
