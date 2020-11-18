@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+
 import PropTypes from "prop-types";
 
 export const ServiceCard = props => {
@@ -7,7 +8,7 @@ export const ServiceCard = props => {
 	return (
 		<div
 			className="card mb-3"
-			style={{ maxWidth: "540px" }}
+			style={{ maxWidth: "540px", background: "#dce0f5" }}
 			onClick={() => {
 				props.setSelect(!props.select);
 			}}>

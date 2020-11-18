@@ -61,8 +61,15 @@ export const SignUp = () => (
 			</Link>
 		</form>
 		<h1 style={{ marginLeft: "50px", marginTop: "50px", color: "rgb(32 93 117)" }}>
-			Welcome to Iwipe the cleaning App
-			<p style={{ background: "#dce0f5", width: "170px", margin: "auto", borderRadius: "100px" }}>
+			Welcome to iWipe the cleaning App
+			<p
+				style={{
+					background: "#dce0f5",
+					width: "170px",
+					margin: "auto",
+					borderRadius: "100px",
+					marginTop: "40px"
+				}}>
 				<img src="https://img.icons8.com/fluent-systems-regular/144/000000/housekeeping.png" />
 			</p>
 		</h1>

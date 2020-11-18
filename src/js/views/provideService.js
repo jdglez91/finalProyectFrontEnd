@@ -22,6 +22,7 @@ export const ProvideService = () => {
 					<input type="file" className="form-control-file" id="exampleFormControlFile1" />
 				</div>
 			</div>
+
 			<form>
 				<div className="form-row">
 					<div className="form-group col-md-6">
@@ -68,6 +69,8 @@ export const ProvideService = () => {
 						id="inputAddress"
 						placeholder="Residential or Comercial"
 						value={providerInfo.type}
+						name="type"
+						onChange={e => setProviderInfo({ ...providerInfo, [e.target.name]: e.target.value })}
 					/>
 				</div>
 
@@ -99,6 +102,20 @@ export const ProvideService = () => {
 						<textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
 					</div>
 				</div>
+				<Link to="/main">
+					<button type="submit" className="btn btn-primary" onClick={() => actions.setLoggedIn(true)}>
+						Submit
+					</button>
+				</Link>
+				<Link to="/main">
+					<button
+						type="submit"
+						className="btn btn-primary"
+						onClick={() => actions.setLoggedIn(true)}
+						style={{ marginLeft: "30px" }}>
+						Go Back
+					</button>
+				</Link>
 			</form>
 		</div>
 	);
