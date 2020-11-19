@@ -5,7 +5,7 @@ import { Search } from "../component/search";
 import { ServiceCard } from "../component/serviceProvider";
 
 export const ServiceRequest = () => {
-	const { store } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	const [select, setSelect] = useState(false);
 	let mapServices = store.servicesProviders.map(service => {
 		return (
@@ -20,9 +20,24 @@ export const ServiceRequest = () => {
 	});
 	return (
 		<div className="container">
+			<Search />
 			<div className="row">
 				{!select ? (
-					<>{mapServices}</>
+					store.searchResult.length > 0 ? (
+						store.searchResult.map(service => {
+							return (
+								<ServiceCard
+									className="col-sm"
+									key={service.name}
+									provider={service}
+									setSelect={setSelect}
+									select={select}
+								/>
+							);
+						})
+					) : (
+						<>{mapServices}</>
+					)
 				) : (
 					<>
 						<div className="col-sm">

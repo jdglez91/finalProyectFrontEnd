@@ -9,20 +9,22 @@ export const Search = () => {
 	const [search, setSearch] = useState("");
 	return (
 		<div className="container-fluid">
-			<form className="form-inline my-2 my-lg-0">
-				<input
-					className="form-control mr-sm-2"
-					value={search}
-					onChange={e => setSearch(e.target.value)}
-					type="search"
-					placeholder="Search"
-					aria-label="Search"
-				/>
-				<button className="btn btn-outline-success my-2 my-sm-0" type="submit">
-					Search
-				</button>
-			</form>
-			{store.servicesProviders.map((item, index) => {
+			{/* <form className="form-inline my-2 my-lg-0"> */}
+			<input
+				className="form-control mr-sm-2"
+				onChange={e => setSearch(e.target.value)}
+				type="text"
+				placeholder="Search"
+				aria-label="Search"
+			/>
+			<button
+				onClick={() => actions.search(search)}
+				className="btn btn-outline-success my-2 my-sm-0"
+				type="button">
+				Search
+			</button>
+			{/* </form> */}
+			{/* {store.servicesProviders.map((item, index) => {
 				if (
 					search != "" &&
 					(item.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -31,7 +33,7 @@ export const Search = () => {
 				) {
 					return <ServiceProvider key={index} provider={item} index={index} />;
 				}
-			})}
+			})} */}
 		</div>
 	);
 };

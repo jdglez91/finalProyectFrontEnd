@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			loggedIn: false,
+			searchResult: [],
 			servicesProviders: [
 				{
 					name: "Jose Gonzalez",
@@ -40,6 +41,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 				/**
 					fetch().then().then(data => setStore({ "foo": data.bar }))
 				*/
+			},
+			search: search => {
+				const store = getStore();
+				let result = store.servicesProviders.filter(
+					item =>
+						item.name.toLowerCase().includes(search.toLowerCase()) ||
+						item.city.toLowerCase().includes(search.toLowerCase()) ||
+						item.date.includes(search) ||
+						item.hourlyRate.includes(search)
+				);
+				console.log(result);
+				setStore({ searchResult: result });
 			},
 			changeColor: (index, color) => {
 				//get the store
