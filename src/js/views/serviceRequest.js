@@ -3,6 +3,8 @@ import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import { Search } from "../component/search";
 import { ServiceCard } from "../component/serviceProvider";
+import { ProfileCard } from "../component/profileCard";
+import { ProfileView } from "./profileView";
 
 export const ServiceRequest = () => {
 	const { store, actions } = useContext(Context);
@@ -40,10 +42,9 @@ export const ServiceRequest = () => {
 					)
 				) : (
 					<>
-						<div className="col-sm">
+						<div className="my-3">
 							<div className="form-group">
-								<label For="exampleFormControlTextarea1">Description</label>
-								<textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
+								<ProfileView />
 							</div>
 						</div>
 						<div className="col-sm">

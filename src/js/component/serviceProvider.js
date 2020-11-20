@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
 import PropTypes from "prop-types";
 
@@ -21,7 +22,8 @@ export const ServiceCard = props => {
 						<div className="card-body">
 							<h5 className="card-title">{props.provider.name}</h5>
 							<p className="card-text">
-								{/* Provides the following services: {props.provider.type.hourlyRate.name.city.state} */}
+								Provides the following services :{props.provider.type}
+								hourlyRate $ :{props.provider.hourlyRate}
 							</p>
 							<p className="card-text">
 								<small className="text-muted">{props.provider.hourlyRate}</small>
@@ -29,6 +31,15 @@ export const ServiceCard = props => {
 						</div>
 					</div>
 				</div>
+				<Link to="/profileView">
+					<button
+						type="submit"
+						className="btn btn-primary"
+						onClick={() => actions.setLoggedIn(true)}
+						style={{ marginLeft: "30px" }}>
+						Select
+					</button>
+				</Link>
 			</div>
 		</div>
 	);

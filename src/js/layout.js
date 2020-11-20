@@ -14,6 +14,7 @@ import { Main } from "./views/main";
 import { ServiceRequest } from "./views/serviceRequest";
 import { ProvideService } from "./views/provideService";
 import { Notifications } from "./views/notifications";
+import { ProfileView } from "./views/profileView";
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -34,6 +35,9 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/provideService">
 							<ProvideService />
+						</Route>
+						<Route exact path="/profileView">
+							<ProfileView />
 						</Route>
 						<Route exact path="/notifications">
 							<Notifications />
