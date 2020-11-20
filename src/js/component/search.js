@@ -8,7 +8,7 @@ export const Search = () => {
 	const { actions, store } = useContext(Context);
 	const [search, setSearch] = useState("");
 	return (
-		<div className="container-fluid">
+		<div className="" style={{ width: "300px", marginBottom: "20px" }}>
 			{/* <form className="form-inline my-2 my-lg-0"> */}
 			<input
 				className="form-control mr-sm-2"

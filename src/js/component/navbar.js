@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 export const Navbar = () => {
 	const { actions, store } = useContext(Context);
 	return (
-		<nav className="container" style={{ paddingBottom: "20px", paddingTop: "20px" }}>
+		<nav className="container" style={{ paddingBottom: "20px", paddingTop: "20px", marginBottom: "30px" }}>
 			{/* <Link to="/">
 				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
 			</Link> */}

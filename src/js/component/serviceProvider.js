@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-import PropTypes from "prop-types";
+import PropTypes, { bool } from "prop-types";
 
 export const ServiceCard = props => {
 	const { actions, store } = useContext(Context);
@@ -10,7 +10,7 @@ export const ServiceCard = props => {
 		<div className="col-4">
 			<div
 				className="card mb-3"
-				style={{ maxWidth: "540px", background: "#dce0f5" }}
+				style={{ maxWidth: "540px", background: "#dce0f5", borderRadius: "40px", fontFamily: "monospace" }}
 				onClick={() => {
 					props.setSelect(!props.select);
 				}}>
@@ -20,10 +20,19 @@ export const ServiceCard = props => {
 					</div>
 					<div className="col-md-8">
 						<div className="card-body">
-							<h5 className="card-title">{props.provider.name}</h5>
+							<h3 className="card-title">{props.provider.name}</h3>
 							<p className="card-text">
-								Provides the following services :{props.provider.type}
-								hourlyRate $ :{props.provider.hourlyRate}
+								<strong>Provides the following services : </strong>
+								{props.provider.type}
+								<p></p>
+								<strong>hourlyRate :$ </strong>
+								{props.provider.hourlyRate}
+								<p></p>
+								<strong>City : </strong>
+								{props.provider.city}
+								<p></p>
+								<strong>State : </strong>
+								{props.provider.state}
 							</p>
 							<p className="card-text">
 								<small className="text-muted">{props.provider.hourlyRate}</small>
@@ -36,7 +45,7 @@ export const ServiceCard = props => {
 						type="submit"
 						className="btn btn-primary"
 						onClick={() => actions.setLoggedIn(true)}
-						style={{ marginLeft: "30px" }}>
+						style={{ marginLeft: "30px", marginBottom: "20px" }}>
 						Select
 					</button>
 				</Link>

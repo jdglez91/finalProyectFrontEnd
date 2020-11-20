@@ -59,6 +59,11 @@ export const SignUp = () => (
 					Sign Up
 				</button>
 			</Link>
+			<Link to="/home">
+				<button type="submit" className="btn btn-primary" style={{ marginLeft: "30px" }}>
+					Go Back
+				</button>
+			</Link>
 		</form>
 		<h1 style={{ marginLeft: "50px", marginTop: "50px", color: "rgb(32 93 117)" }}>
 			Welcome to iWipe the cleaning App

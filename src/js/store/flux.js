@@ -8,17 +8,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					name: "Jose Gonzalez",
 					hourlyRate: "20",
 					date: ["111320", "112020", "120120"],
-					city: "Miami",
-					state: "FL",
-					type: "residential"
+					city: "Cuba",
+					state: "Havana",
+					type: "Commercial"
 				},
 				{
 					name: "Maryann Lopez",
 					hourlyRate: "21",
 					date: ["111620", "111720", "111820"],
-					city: "Miami",
-					state: "FL",
-					type: "residential"
+					city: "Colombia",
+					state: "Cartagena",
+					type: "Residential"
 				},
 				{
 					name: "Mila Fortich",
@@ -26,7 +26,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					date: ["112520", "111720", "111820"],
 					city: "Miami",
 					state: "FL",
-					type: "residential"
+					type: "Residential & Commercial"
 				}
 			]
 		},
