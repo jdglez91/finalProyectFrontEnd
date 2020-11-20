@@ -4,16 +4,19 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { ValidateEmail } from "../component/validateEmail";
 import { ValidatePassword } from "../component/validatePassword";
-import { Alert } from "bootstrap";
+import { useHistory } from "react-router-dom";
 
 export const Home = () => {
 	const { actions, store } = useContext(Context);
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
-	var Url = "/";
+	const history = useHistory();
 	const handleSubmit = event => {
+		console.log("handleSubmit");
+		event.preventDefault();
 		if (ValidateEmail(email) == true && ValidatePassword(password) == true) {
-			Url = "/main";
+			history.push("/main");
+			console.log("validEmail");
 		} else {
 			alert("Email or Passworld not Valid ");
 		}
@@ -25,7 +28,7 @@ export const Home = () => {
 					<img src="https://img.icons8.com/fluent-systems-regular/144/000000/housekeeping.png" />
 				</p>
 				<h2>Log in</h2>
-				<form onChange={handleSubmit()}>
+				<form onSubmit={handleSubmit}>
 					<div className="form-group">
 						<label For="exampleInputEmail1">Email address</label>
 						<input
@@ -46,12 +49,10 @@ export const Home = () => {
 							onChange={e => setPassword(e.target.value)}
 						/>
 					</div>
-				</form>
-				<Link to={Url}>
 					<button type="submit" className="btn btn-primary" onClick={() => actions.setLoggedIn(true)}>
 						Submit
 					</button>
-				</Link>
+				</form>
 			</div>
 		</div>
 	);
